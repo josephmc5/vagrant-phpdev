@@ -1,4 +1,4 @@
-class apt {
+class bootload {
 	file { "/var/cache/apt/archives/":
 	  ensure  => "link",
 	  force   => true,

@@ -2,7 +2,7 @@ stage { 'first':
   before => Stage['main'],
 }
 
-class { 'apt':
+class { 'bootload':
   stage => first,
 }
 
@@ -25,3 +25,4 @@ file { "/var/www/dev":
 class { 'apache': }
 class { 'mysql::server': }
 class { 'php::apache2': }
+class { 'logio': }
