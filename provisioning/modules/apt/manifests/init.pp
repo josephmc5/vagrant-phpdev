@@ -10,7 +10,7 @@ class apt {
 	  require => File['/var/cache/apt/archives/'],
 	}
 
-	exec { "apt-get upgrade -y dist-upgrade":
+	exec { "apt-get dist-upgrade -y":
 	  path    => ["/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/"],
 	  require => Exec['apt-get update'],
 	}
